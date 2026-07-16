@@ -622,6 +622,905 @@ Quando um ID já existir:
 
 ---
 
+# EXPERIÊNCIA DO USUÁRIO, INTERFACE E IDENTIDADE VISUAL
+
+## UX 1. Objetivo de experiência
+
+Durante toda a Fase 2, a interface do SOEA deverá ser construída para transmitir a sensação de um sistema de estudos profissional, e não de uma planilha convencional.
+
+Ao abrir o SOEA, o usuário deverá sentir que possui um assistente pessoal de estudos executado dentro do Google Sheets.
+
+A usabilidade, a organização visual e a facilidade de navegação deverão possuir a mesma importância da implementação técnica.
+
+Toda decisão de interface deverá priorizar:
+
+* simplicidade;
+* clareza;
+* rapidez;
+* redução de cliques;
+* consistência;
+* boa hierarquia visual;
+* baixa curva de aprendizado;
+* facilidade de uso diário;
+* ausência de edição manual em células técnicas;
+* acesso rápido às principais funcionalidades.
+
+A interface deverá ajudar o usuário a responder rapidamente:
+
+```text
+O que devo estudar agora?
+```
+
+e:
+
+```text
+Como está meu progresso?
+```
+
+---
+
+## UX 2. Limites desta fase
+
+Nesta fase, deverão ser criados:
+
+* identidade visual;
+* organização das telas;
+* estrutura do Dashboard;
+* navegação;
+* menus;
+* botões ou áreas visuais de ação;
+* Sidebars;
+* formulários;
+* estados vazios;
+* mensagens;
+* barras de progresso;
+* componentes visuais;
+* estrutura da função Aproveitar Tempo.
+
+As funcionalidades que dependem do Motor Adaptativo poderão permanecer estruturalmente preparadas e apresentar mensagem de indisponibilidade até a Fase 3.
+
+A interface não deverá simular resultados nem utilizar dados fictícios para parecer funcional.
+
+Quando uma funcionalidade ainda não estiver ativa, utilizar mensagem semelhante a:
+
+```text
+A interface desta funcionalidade está pronta.
+
+O funcionamento completo será ativado na Fase 3.
+```
+
+---
+
+## UX 3. Aparência geral
+
+A planilha deverá possuir identidade visual própria e consistente.
+
+Evitar aparência típica de:
+
+* planilha financeira;
+* tabela administrativa;
+* banco de dados exposto;
+* relatório cru;
+* conjunto de células sem hierarquia.
+
+Preferir aparência semelhante a:
+
+* painel de acompanhamento;
+* sistema de produtividade;
+* aplicativo de estudos;
+* assistente pessoal;
+* dashboard moderno.
+
+Utilizar, quando apropriado:
+
+* títulos destacados;
+* subtítulos;
+* cards;
+* espaçamentos consistentes;
+* blocos bem separados;
+* ícones Unicode;
+* cores discretas;
+* tipografia legível;
+* bordas leves;
+* barras de progresso;
+* indicadores visuais;
+* mensagens de orientação.
+
+Evitar:
+
+* excesso de células aparentes;
+* excesso de bordas;
+* excesso de linhas de grade;
+* excesso de cores;
+* textos cortados;
+* áreas vazias sem propósito;
+* células mescladas desnecessárias;
+* informações técnicas expostas;
+* grande quantidade de dados simultâneos.
+
+As linhas de grade deverão ser ocultadas nas abas de interface quando isso melhorar a apresentação.
+
+---
+
+## UX 4. Identidade visual
+
+A interface deverá utilizar uma paleta consistente.
+
+A implementação poderá ajustar tonalidades para garantir contraste, mas deverá seguir semanticamente:
+
+### Verde
+
+Utilizar para:
+
+* progresso;
+* conclusão;
+* sucesso;
+* domínio elevado;
+* atividade realizada.
+
+### Azul
+
+Utilizar para:
+
+* navegação;
+* informações;
+* ações principais;
+* títulos;
+* elementos neutros do sistema.
+
+### Amarelo ou laranja
+
+Utilizar para:
+
+* atenção;
+* revisão próxima;
+* desempenho intermediário;
+* pendência não crítica.
+
+### Vermelho
+
+Utilizar somente para:
+
+* erro;
+* inconsistência;
+* atraso importante;
+* alerta crítico;
+* domínio baixo.
+
+### Cinza
+
+Utilizar para:
+
+* informações secundárias;
+* estados desativados;
+* fundos;
+* divisões;
+* elementos ainda sem dados.
+
+Não utilizar cores de maneira aleatória apenas para diferenciar seções.
+
+A mesma cor deverá representar o mesmo significado em todas as telas.
+
+---
+
+## UX 5. Tipografia e hierarquia
+
+A hierarquia deverá permitir identificar rapidamente:
+
+1. nome da tela;
+2. situação atual;
+3. próxima ação;
+4. indicadores principais;
+5. informações complementares.
+
+Utilizar:
+
+* título principal destacado;
+* subtítulos menores;
+* valores numéricos em evidência;
+* textos auxiliares discretos;
+* rótulos curtos;
+* instruções objetivas.
+
+Evitar:
+
+* textos longos dentro das células;
+* títulos com tamanho semelhante ao conteúdo;
+* linguagem excessivamente técnica;
+* instruções espalhadas sem agrupamento.
+
+---
+
+## UX 6. Dashboard
+
+O Dashboard deverá ser a principal tela do SOEA.
+
+Ao abrir a planilha, o usuário deverá compreender sua situação de estudos em poucos segundos.
+
+A estrutura deverá preparar cards ou áreas para:
+
+* dias até a prova;
+* próximo bloco;
+* disciplina atual;
+* assunto atual;
+* etapa atual;
+* tempo estimado;
+* progresso geral;
+* progresso do ciclo;
+* horas totais;
+* horas da semana;
+* questões totais;
+* questões da semana;
+* aproveitamento;
+* revisões pendentes;
+* revisões atrasadas;
+* erros pendentes;
+* percentual do edital;
+* sequência de estudos;
+* próximo simulado.
+
+Nesta fase, somente indicadores que possuam dados reais deverão exibir valores.
+
+Quando não houver dados, utilizar:
+
+```text
+Ainda sem dados
+```
+
+ou:
+
+```text
+Comece seu primeiro ciclo para visualizar este indicador.
+```
+
+Não utilizar números fictícios, históricos simulados ou percentuais inventados.
+
+---
+
+## UX 7. Ações principais no Dashboard
+
+O Dashboard deverá destacar visualmente as principais ações:
+
+```text
+▶ Continuar Ciclo
+```
+
+```text
+🚀 Aproveitar Tempo
+```
+
+Também poderá disponibilizar atalhos para:
+
+```text
+📝 Registrar Questões
+```
+
+```text
+⚠ Registrar Erro
+```
+
+```text
+📅 Revisões
+```
+
+```text
+📊 Atualizar Dashboard
+```
+
+```text
+⚙ Configurações
+```
+
+Os atalhos visuais poderão utilizar:
+
+* menu personalizado;
+* desenhos associados a funções;
+* células formatadas como áreas de ação;
+* links internos;
+* Sidebars;
+* combinação segura de recursos nativos.
+
+Não criar elementos que pareçam botões, mas não executem nenhuma ação.
+
+Quando a função ainda pertencer à Fase 3 ou 4, o botão deverá abrir sua interface estrutural e informar claramente a indisponibilidade temporária.
+
+---
+
+## UX 8. Aproveitar Tempo
+
+A função **Aproveitar Tempo** é um dos principais diferenciais do SOEA.
+
+Ela deverá possuir destaque visual equivalente ao botão Continuar Ciclo.
+
+O usuário deverá conseguir acessá-la diretamente:
+
+* pelo Dashboard;
+* pelo menu personalizado;
+* pela Sidebar correspondente.
+
+A interface deverá ser extremamente simples.
+
+O fluxo visual esperado será:
+
+```text
+Aproveitar Tempo
+↓
+Informar tempo disponível
+↓
+Selecionar objetivo
+↓
+Informar energia, quando necessário
+↓
+Receber uma sugestão
+↓
+Iniciar a atividade
+```
+
+Objetivos disponíveis:
+
+* Questões;
+* Revisão;
+* Banco de Erros;
+* Tanto faz.
+
+A Sidebar deverá preparar campos e áreas para apresentar:
+
+* tempo disponível;
+* nível de energia;
+* objetivo;
+* atividade sugerida;
+* disciplina;
+* assunto;
+* motivo da sugestão;
+* tempo estimado;
+* prioridade;
+* botão de início;
+* botão de cancelamento.
+
+Exemplo de apresentação:
+
+```text
+Você possui 18 minutos disponíveis.
+
+Sugestão:
+Revisar Banco de Dados
+
+Assunto:
+Normalização
+
+Tempo estimado:
+15 minutos
+
+Motivo:
+Revisão pendente e assunto prioritário.
+```
+
+Nesta fase, o Motor Adaptativo ainda não deverá ser simulado.
+
+Enquanto a lógica não estiver disponível, a interface deverá informar:
+
+```text
+A estrutura do Aproveitar Tempo está pronta.
+
+As sugestões automáticas serão ativadas na Fase 3.
+```
+
+O usuário não deverá precisar navegar manualmente pelas abas para acessar essa funcionalidade.
+
+---
+
+## UX 9. Navegação
+
+A navegação deverá exigir o menor número possível de ações.
+
+Sempre que apropriado, utilizar:
+
+* menu personalizado;
+* Dashboard;
+* Sidebars;
+* links internos;
+* áreas de ação;
+* navegação guiada.
+
+Evitar obrigar o usuário a procurar manualmente:
+
+* a aba correta;
+* uma linha específica;
+* uma célula específica;
+* uma tabela interna;
+* um ID;
+* uma configuração técnica.
+
+O menu `SOEA` deverá ser a navegação oficial para as ações do sistema.
+
+As abas visíveis deverão servir principalmente para:
+
+* consulta;
+* acompanhamento;
+* configuração permitida;
+* visualização de resultados.
+
+---
+
+## UX 10. Menu personalizado
+
+O menu deverá possuir organização simples e previsível:
+
+```text
+SOEA
+├── Continuar Ciclo
+├── Aproveitar Tempo
+├── Registrar Questões
+├── Registrar Erro
+├── Registrar Simulado
+├── Atualizar Dashboard
+├── Configurações
+├── Verificar Integridade
+├── Criar Backup
+├── Ajuda
+└── Sobre
+```
+
+As funcionalidades principais deverão aparecer primeiro.
+
+As funções administrativas e de suporte deverão aparecer depois.
+
+Nenhum item poderá chamar função inexistente.
+
+Nenhum clique poderá exibir stack trace ou mensagem técnica ao usuário.
+
+---
+
+## UX 11. Sidebars
+
+Sempre que uma interação exigir entrada de dados, preferir Sidebars em vez de edição direta de células.
+
+Utilizar Sidebars para:
+
+* iniciar sessão;
+* Continuar Ciclo;
+* Aproveitar Tempo;
+* registrar questões;
+* registrar erro;
+* realizar revisão;
+* registrar simulado;
+* alterar configurações;
+* visualizar ajuda;
+* visualizar informações do sistema.
+
+Todas as Sidebars deverão possuir:
+
+* título claro;
+* breve explicação;
+* rótulos visíveis;
+* campos organizados;
+* indicação de obrigatoriedade;
+* validação;
+* botão principal;
+* botão de cancelar;
+* estado de carregamento;
+* prevenção contra clique repetido;
+* mensagem de sucesso;
+* mensagem de erro;
+* preservação dos dados digitados em caso de falha.
+
+Evitar formulários longos.
+
+Não solicitar informações que possam ser preenchidas automaticamente pelo sistema.
+
+---
+
+## UX 12. Componentes compartilhados
+
+Os arquivos:
+
+```text
+Styles.html
+Scripts.html
+Components.html
+```
+
+deverão centralizar componentes visuais reutilizáveis.
+
+Criar padrões consistentes para:
+
+* botões;
+* campos;
+* seletores;
+* mensagens;
+* cards;
+* indicadores;
+* carregamento;
+* erro;
+* sucesso;
+* atenção;
+* estados vazios.
+
+Evitar que cada Sidebar possua uma identidade visual diferente.
+
+---
+
+## UX 13. Organização das abas
+
+As abas visíveis deverão possuir nomes claros:
+
+* Dashboard;
+* Ciclo;
+* Banco de Erros;
+* Simulados;
+* Estatísticas;
+* Configurações.
+
+As abas técnicas deverão permanecer ocultas.
+
+O usuário não deverá precisar visualizar:
+
+* bases internas;
+* tabelas auxiliares;
+* logs;
+* histórico técnico;
+* backups;
+* caches;
+* estruturas temporárias;
+* configurações internas.
+
+As abas ocultas deverão continuar acessíveis ao script.
+
+A proteção não poderá impedir o funcionamento do sistema.
+
+---
+
+## UX 14. Aba Ciclo
+
+A aba Ciclo deverá apresentar uma visão organizada do estudo atual.
+
+Preparar áreas para:
+
+* ciclo ativo;
+* bloco atual;
+* disciplina;
+* assunto;
+* etapa;
+* tempo previsto;
+* tempo realizado;
+* progresso;
+* quantidade de questões;
+* sessão;
+* próxima ação.
+
+Quando não houver ciclo, apresentar:
+
+```text
+Nenhum ciclo iniciado.
+
+Utilize o menu SOEA para começar.
+```
+
+A aba não deverá parecer uma tabela técnica.
+
+---
+
+## UX 15. Banco de Erros
+
+A aba visível Banco de Erros deverá ser organizada para consulta.
+
+Utilizar:
+
+* filtros;
+* cabeçalhos claros;
+* status visuais;
+* formatação condicional;
+* destaque de recorrência;
+* destaque de erros novos;
+* estado vazio.
+
+Não expor colunas técnicas desnecessárias.
+
+Não exigir que o usuário edite diretamente a base interna.
+
+---
+
+## UX 16. Simulados e Estatísticas
+
+As abas Simulados e Estatísticas deverão possuir estrutura visual preparada, mesmo que as funções finais sejam implementadas somente na Fase 4.
+
+Utilizar:
+
+* títulos;
+* instruções;
+* estados vazios;
+* áreas reservadas para indicadores;
+* áreas reservadas para gráficos;
+* filtros visuais quando aplicável.
+
+Não preencher essas áreas com dados fictícios.
+
+---
+
+## UX 17. Configurações
+
+A aba e a Sidebar de Configurações deverão apresentar somente opções compreensíveis e editáveis.
+
+Separar visualmente as configurações por categoria, como:
+
+* prova;
+* estudos;
+* questões;
+* revisões;
+* energia;
+* backups;
+* metas.
+
+Não exibir diretamente:
+
+* IDs;
+* nomes internos;
+* chaves técnicas;
+* cabeçalhos;
+* versão estrutural;
+* dados protegidos;
+* parâmetros não editáveis.
+
+Cada configuração deverá possuir:
+
+* nome amigável;
+* descrição curta;
+* valor atual;
+* tipo apropriado;
+* validação.
+
+---
+
+## UX 18. Barras de progresso
+
+Sempre que existir percentual relevante, utilizar representação visual.
+
+Exemplos:
+
+* progresso geral;
+* progresso do ciclo;
+* progresso do bloco;
+* progresso por disciplina;
+* assuntos concluídos;
+* revisões realizadas.
+
+As barras poderão ser implementadas por:
+
+* formatação condicional;
+* funções nativas;
+* caracteres visuais;
+* gráficos adequados.
+
+Não utilizar somente a cor.
+
+Apresentar também o percentual ou um rótulo textual.
+
+---
+
+## UX 19. Estados vazios
+
+Toda tela sem dados deverá explicar:
+
+* por que está vazia;
+* o que aparecerá futuramente;
+* qual ação o usuário deve realizar.
+
+Exemplo:
+
+```text
+Ainda não existem sessões registradas.
+
+Utilize “Continuar Ciclo” para iniciar seu primeiro estudo.
+```
+
+Evitar telas completamente em branco.
+
+---
+
+## UX 20. Mensagens
+
+As mensagens deverão ser:
+
+* curtas;
+* claras;
+* amigáveis;
+* orientadas à ação;
+* livres de detalhes técnicos.
+
+Exemplo de sucesso:
+
+```text
+Configuração salva com sucesso.
+```
+
+Exemplo de indisponibilidade:
+
+```text
+Esta funcionalidade será ativada na Fase 3.
+```
+
+Exemplo de erro:
+
+```text
+Não foi possível concluir esta ação.
+
+Nenhum dado foi perdido.
+Revise as informações e tente novamente.
+```
+
+Não exibir:
+
+* stack trace;
+* objeto JSON;
+* nome de função interna;
+* número de linha;
+* nome de aba interna;
+* código técnico desnecessário.
+
+---
+
+## UX 21. Acessibilidade
+
+A interface deverá observar:
+
+* contraste suficiente;
+* tamanho de texto legível;
+* rótulos nos campos;
+* indicação de campos obrigatórios;
+* estados de foco;
+* textos claros;
+* navegação por teclado quando possível.
+
+Não utilizar apenas cores para representar:
+
+* sucesso;
+* erro;
+* domínio;
+* prioridade;
+* status.
+
+Combinar cores com:
+
+* texto;
+* rótulos;
+* símbolos;
+* percentuais.
+
+---
+
+## UX 22. Uso em telas menores
+
+A experiência principal será otimizada para navegador em computador.
+
+Mesmo assim, as informações principais deverão permanecer legíveis:
+
+* em notebook;
+* em monitor menor;
+* no aplicativo Google Sheets para celular, quando possível.
+
+Considerar que menus e Sidebars do Apps Script podem possuir limitações no aplicativo móvel.
+
+Não prometer experiência móvel completa quando o Google Sheets não oferecer suporte.
+
+Garantir ao menos que o usuário consiga consultar:
+
+* Dashboard;
+* Ciclo;
+* revisões;
+* progresso;
+* dados principais.
+
+---
+
+## UX 23. Consistência
+
+Todos os elementos deverão seguir os mesmos padrões de:
+
+* cores;
+* espaçamento;
+* títulos;
+* botões;
+* campos;
+* mensagens;
+* cards;
+* status;
+* carregamento.
+
+Uma ação primária deverá parecer igual em todas as Sidebars.
+
+Uma mensagem de erro deverá utilizar o mesmo padrão em todo o sistema.
+
+---
+
+## UX 24. Testes visuais obrigatórios
+
+Antes de concluir a Fase 2, o Codex deverá abrir e verificar visualmente:
+
+* Dashboard;
+* Ciclo;
+* Banco de Erros;
+* Simulados;
+* Estatísticas;
+* Configurações;
+* menu SOEA;
+* todas as Sidebars.
+
+Verificar:
+
+* alinhamento;
+* legibilidade;
+* contraste;
+* títulos;
+* espaçamento;
+* campos;
+* botões;
+* estados vazios;
+* mensagens;
+* textos cortados;
+* elementos quebrados;
+* áreas técnicas expostas;
+* aparência em janela menor.
+
+Problemas encontrados deverão ser corrigidos e testados novamente.
+
+---
+
+## UX 25. Pergunta obrigatória de revisão
+
+Antes de considerar a Fase 2 concluída, o Codex deverá avaliar:
+
+```text
+A interface parece uma planilha comum ou um sistema de estudos?
+```
+
+Caso a resposta seja:
+
+```text
+Planilha comum
+```
+
+a interface deverá ser refinada antes da entrega.
+
+A aparência não precisa ser excessivamente sofisticada, mas deverá ser:
+
+* organizada;
+* consistente;
+* moderna;
+* agradável;
+* clara;
+* funcional.
+
+---
+
+## UX 26. Critérios de aceite de UX
+
+A Fase 2 somente poderá ser apresentada para revisão quando:
+
+* [ ] O Dashboard possuir identidade visual consistente.
+* [ ] A interface não apresentar aparência excessivamente crua.
+* [ ] As linhas de grade estiverem ocultas onde apropriado.
+* [ ] As principais ações estiverem acessíveis pelo menu ou por atalhos visuais.
+* [ ] Continuar Ciclo possuir destaque.
+* [ ] Aproveitar Tempo possuir destaque equivalente.
+* [ ] A Sidebar Aproveitar Tempo estiver estruturada.
+* [ ] A navegação estiver simplificada.
+* [ ] As Sidebars possuírem padrão visual consistente.
+* [ ] As abas técnicas estiverem ocultas.
+* [ ] As abas visíveis estiverem organizadas.
+* [ ] Os estados vazios orientarem o usuário.
+* [ ] Os percentuais relevantes possuírem representação visual.
+* [ ] As mensagens não apresentarem detalhes técnicos.
+* [ ] Os campos possuírem rótulos e validações.
+* [ ] As cores possuírem significado consistente.
+* [ ] A interface possuir contraste e legibilidade adequados.
+* [ ] O usuário não precisar editar células técnicas.
+* [ ] O usuário conseguir encontrar Continuar Ciclo rapidamente.
+* [ ] O usuário conseguir encontrar Aproveitar Tempo rapidamente.
+* [ ] Nenhum elemento visual utilizar dados fictícios.
+* [ ] Todas as telas e Sidebars tiverem sido verificadas na planilha real.
+* [ ] A experiência geral transmitir a sensação de um sistema de estudos executado dentro do Google Sheets.
+
+
 # 14. Abas visíveis
 
 Criar:
