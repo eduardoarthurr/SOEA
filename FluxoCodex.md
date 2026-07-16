@@ -295,7 +295,7 @@ analises/06_Validacao_Dados.md
 
 Confira os CSVs.
 
-Caso haja correções, envie:
+Caso haja correções,envie:
 
 ```text
 A Fase 1 ainda não está aprovada.
