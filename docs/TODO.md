@@ -105,11 +105,19 @@ Ao concluir uma tarefa, deverá:
 
 ## 3.3 Aprovação da documentação
 
-* [ ] Confirmar versão consolidada do `PRD.md`.
-* [ ] Confirmar versão final do `ARQUITETURA.md`.
-* [ ] Confirmar versão inicial do `ROADMAP.md`.
-* [ ] Confirmar versão inicial do `TODO.md`.
-* [ ] Registrar aprovação da Fase 0 no `ROADMAP.md`.
+* [x] Confirmar versão consolidada do `PRD.md`.
+* [x] Confirmar versão final do `ARQUITETURA.md`.
+* [x] Confirmar versão inicial do `ROADMAP.md`.
+* [x] Confirmar versão inicial do `TODO.md`.
+* [x] Registrar aprovação da Fase 0 no `ROADMAP.md`.
+* [x] Confirmar versão inicial do  `CHANGELOG.md`.
+* [x] Criar o Prompt 00.
+* [x] Criar o Prompt 01.
+* [x] Criar o Prompt 02.
+* [x] Criar o Prompt 03.
+* [x] Criar o Prompt 04.
+* [x] Adicionar o edital oficial.
+* [x] Documentar o fluxo do Codex.
 
 ---
 
